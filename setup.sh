@@ -17,7 +17,7 @@ elif [[ "$OS_NAME" == "Darwin" ]]; then
   brew install zsh zsh-completions
 fi
 
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone git://github.com/ndbroadbent/scm_breeze.git ~/.scm_breeze
 ~/.scm_breeze/install.sh
