@@ -12,7 +12,7 @@ elif [[ "$OS_NAME" == "Darwin" ]]; then
   else
     # The package is not installed
     env ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  end
+  fi
   brew install zsh zsh-completions
 fi
 
