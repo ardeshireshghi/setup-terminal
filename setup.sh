@@ -9,6 +9,7 @@ if [[ "$OS_NAME" == "Linux" ]]; then
 elif [[ "$OS_NAME" == "Darwin" ]]; then
   if brew ls --versions myformula > /dev/null; then
     # The package is installed
+    echo 'Brew is installed'
   else
     # The package is not installed
     env ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
