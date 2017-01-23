@@ -1,7 +1,11 @@
 #!/bin/bash
 OS_NAME=$(uname)
 if [[ "$OS_NAME" == "Linux" ]]; then
-  sudo apt-get -y install zsh
+  if [ -n "$(command -v yum)" ]; then
+   sudo yum -y install zsh
+  else
+   sudo apt-get -y install zsh
+  fi
 elif [[ "$OS_NAME" == "Darwin" ]]; then
   if brew ls --versions myformula > /dev/null; then
     # The package is installed
